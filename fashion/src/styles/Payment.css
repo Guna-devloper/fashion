@@ -1,0 +1,77 @@
+/* Payment Container */
+.payment-container {
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Title */
+  .payment-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  /* Total Amount */
+  .payment-total {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  /* Payment Methods */
+  .payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 15px;
+  }
+  
+  /* Payment Options */
+  .payment-option {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  /* Payment Button */
+  .payment-button {
+    width: 100%;
+    padding: 12px;
+    background: blue;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  /* ✅ Responsive Styles */
+  @media (max-width: 480px) {
+    .payment-container {
+      width: 100%;
+      padding: 15px;
+    }
+  
+    .payment-title {
+      font-size: 1.3rem;
+    }
+  
+    .payment-total {
+      font-size: 1rem;
+    }
+  
+    .payment-methods {
+      align-items: center;
+    }
+  
+    .payment-button {
+      font-size: 14px;
+      padding: 10px;
+    }
+  }
+  

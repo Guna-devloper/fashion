@@ -1,0 +1,28 @@
+/* Shop Page Styles */
+.shop-container {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+  }
+  
+  /* Centering the heading */
+  .shop-container h2 {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Loading Spinner Styles */
+  .text-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Responsive Grid */
+  @media (max-width: 576px) {
+    .shop-container {
+      padding: 10px;
+    }
+  }
+  
