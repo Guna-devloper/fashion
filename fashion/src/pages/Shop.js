@@ -32,13 +32,18 @@ const Shop = () => {
 
         const productList = await response.json();
         console.log("✅ Products fetched:", productList);
-        setProducts(productList);
-        setFilteredProducts(productList);
 
-        let extractedCategories = productList.map((product) => product.category);
+        // ✅ Remove "electronics" category products
+        const filteredProductList = productList.filter(product => product.category !== "electronics");
+
+        setProducts(filteredProductList);
+        setFilteredProducts(filteredProductList);
+
+        let extractedCategories = filteredProductList.map((product) => product.category);
         extractedCategories = [...new Set(extractedCategories)];
 
-        const requiredCategories = ["All", "men's clothing", "women's clothing", "electronics", "jewelery"];
+        // ✅ Remove "electronics" from the categories list
+        const requiredCategories = ["All", "men's clothing", "women's clothing", "jewelery"];
         setCategories([...new Set([...requiredCategories, ...extractedCategories])]);
 
       } catch (err) {
@@ -67,6 +72,9 @@ const Shop = () => {
         if (!response.ok) throw new Error("Failed to fetch filtered products!");
 
         let filteredData = await response.json();
+
+        // ✅ Remove electronics category from filtering
+        filteredData = filteredData.filter(product => product.category !== "electronics");
 
         if (searchQuery.trim() !== "") {
           filteredData = filteredData.filter((product) =>
